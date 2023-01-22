@@ -2,32 +2,37 @@
 обозначающую день недели, и проверяет, является ли этот день выходным. */
 
 Console.Write("Введите номер дня недели (от 1 до 7): ");
-int NumberDay = Convert.ToInt32( Console.ReadLine() );
+int NumberDay = Convert.ToInt32( Console.ReadLine());
 
 switch (NumberDay){
     case 1:        
-    Console.Write("Понедельник"); 
+    Console.Write("Понедельник: "); 
     break;
     case 2:        
-    Console.Write("Вторник"); 
+    Console.Write("Вторник: "); 
     break;
     case 3:        
-    Console.Write("Среда"); 
+    Console.Write("Среда: "); 
     break;
     case 4:        
-    Console.Write("Четверг"); 
+    Console.Write("Четверг: "); 
     break;
     case 5:        
-    Console.Write("Пятница"); 
+    Console.Write("Пятница: "); 
     break;
     case 6:        
-    Console.Write("Суббота"); 
+    Console.Write("Суббота: "); 
     break;
     case 7:        
-    Console.Write("Воскресенье"); 
+    Console.Write("Воскресенье: "); 
     break;
     default:
     Console.Write("В неделе 7 дней, введите цифру от 1 до 7: "); 
     break;
 }
-
+if (NumberDay <= 5)
+    Console.Write("Рабочий день");
+    else if (NumberDay > 7)
+    Console.Write("Error: ");
+else
+   Console.Write("Выходной день");
