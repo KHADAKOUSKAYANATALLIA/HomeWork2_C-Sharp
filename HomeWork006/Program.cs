@@ -4,20 +4,22 @@
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine()); 
 
-int result = 1;
+if (number > 99)
+{
 
-if (number >= 100)
-{                  
-    int thirdDigit = number;  // number / 10; 
-    result = thirdDigit % 10;
+     while (number > 999)
+     {
+        number = number / 10;
+     }
+     int result = number % 10;
+     Console.WriteLine("Третья цифра заданного числа: " + result);
 }
 
 else
+
 {
-    Console.WriteLine("Третьей цифры нет");
-    return;
+     Console.WriteLine("Третьей цифры нет");
 } 
 
-    
-Console.WriteLine("Третья цифра заданного числа: " + result);
+
 
